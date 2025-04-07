@@ -22,11 +22,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.UserModel", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    b.Property<string>("UserName")
+                        .HasColumnType("text");
 
                     b.Property<string>("Adress")
                         .IsRequired()
@@ -52,7 +49,7 @@ namespace backend.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("Id");
+                    b.HasKey("UserName");
 
                     b.ToTable("UserModels");
                 });

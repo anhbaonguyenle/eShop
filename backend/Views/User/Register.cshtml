@@ -1,0 +1,33 @@
+@model backend.Models.UserModel
+@{
+    ViewData["Title"] = "Đăng ký";
+}
+
+<h2>Đăng ký</h2>
+
+<form asp-action="Register" method="post">
+    <div>
+        <label>Tên đăng nhập</label>
+        <input asp-for="UserName" />
+        <span asp-validation-for="UserName"></span>
+    </div>
+    <div>
+        <label>Tên</label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label>Mật khẩu</label>
+        <input type="password" name="password" />
+    </div>
+    <div>
+        <button type="submit">Đăng ký</button>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

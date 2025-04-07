@@ -1,8 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace backend.Models;
 
     public class UserModel
     {
-        public int Id { get; set; }
+        [Key]
+        [Required(ErrorMessage = "Tên đăng nhập không được để trống")]
+        public string UserName { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;

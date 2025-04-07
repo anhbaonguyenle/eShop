@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace backend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250407051654_InitialCreate")]
+    [Migration("20250407055422_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -25,11 +25,8 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.UserModel", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    b.Property<string>("UserName")
+                        .HasColumnType("text");
 
                     b.Property<string>("Adress")
                         .IsRequired()
@@ -55,7 +52,7 @@ namespace backend.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("Id");
+                    b.HasKey("UserName");
 
                     b.ToTable("UserModels");
                 });
