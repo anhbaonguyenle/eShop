@@ -4,11 +4,9 @@ using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 
-DotNetEnv.Env.Load(); // Load from .env
-
+DotNetEnv.Env.Load(); 
 var connectionString = Environment.GetEnvironmentVariable("POSTGRES_CONNECTION");
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
