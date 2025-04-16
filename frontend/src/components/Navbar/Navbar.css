@@ -1,0 +1,53 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdf9cc;
+    padding: 10px 30px;
+    border-bottom: 1px solid #ccc;
+    font-family: 'Georgia', serif;
+  }
+  
+  .navbar-left .logo {
+    text-align: left;
+  }
+  
+  .navbar-center {
+    display: flex;
+    gap: 40px;
+    font-size: 16px;
+  }
+  
+  .navbar-center a {
+    text-decoration: none;
+    color: #111;
+  }
+  
+  .navbar-center a:hover {
+    color: #555;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .search-input {
+    border: none;
+    border-bottom: 1px solid #333;
+    background: transparent;
+    outline: none;
+    width: 100px;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  .logo {
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+  }
